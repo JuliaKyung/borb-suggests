@@ -13,7 +13,7 @@
 }
 
 .resultsDiv {
-    width: 90%;
+    width: 50%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -50,6 +50,7 @@
     border-radius: 0.5rem;
     width: 30rem;
     max-height: 300px;
+    object-fit: contain;
     object-fit: cover;
   }
   
