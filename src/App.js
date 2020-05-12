@@ -1,26 +1,77 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import "./App.css";
+import Recipe from "./components/Recipe";
+import Alert from "./components/Alert";
+import Axios from "axios";
+import {v4 as uuidv4} from "uuid";
+require('dotenv').config();
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const [query, setQuery] = useState("");
+    const [diet, setDiet] = useState("");
+    const [recipes, setRecipes] = useState([]);
+    const [alert, setAlert] = useState("");
+    
+    const API_KEY = "4559be87607d4ee3aab02fc366e98b34";
+    const url = `https://api.spoonacular.com/recipes/search?query=${query}&apiKey=${API_KEY}&diet=${diet}`;
+
+    const getData = async () => {
+        if(query !== ""){
+            const result = await Axios.get(url) //testing out the url
+            //async await because it needs to wait a little bit to get the data
+            //basic search
+            if(result.data.totalResults === 0){
+                return setAlert("Borb cannot find what you want!!")
+            }
+            setRecipes(result.data.results)
+            console.log(result);
+            setQuery(""); //reset afterwards
+            setDiet("");
+            setAlert("")
+        } else {
+            setAlert("A Borb can't recommend NOTHING!")
+        }
+    }
+
+    const submitSearch = (e) => {
+        e.preventDefault();
+        getData();
+    }
+
+    const onChange = (e) => {
+        // console.log(e.target.value)
+        setQuery(e.target.value);
+    }
+
+    const onClick = (e) => {
+        setDiet(e.target.id)
+        // console.log(e.target.checked)
+    }
+
+    return (
+        <div className="app-div">
+            <h1>Borb suggests</h1>
+            <form className="searchForm" onSubmit={submitSearch}>
+                {alert !== "" && <Alert alert={alert}/>}
+                <input 
+                type="text" 
+                placeholder="Search food" 
+                onChange={onChange}
+                value={query}/>
+                <form className="diet">
+                    <input type="radio" onClick={onClick} id="vegetarian" name="dietbtn"/> Vegetarian
+                    <input type="radio" onClick={onClick} id="vegan" name="dietbtn"/> Vegan
+                    <input type="radio" onClick={onClick} id="ketogenic" name="dietbtn"/> Keto
+                </form>
+                <input type="submit" value="search"></input>
+            </form>
+            <div className="resultsDiv">
+            {/* Make sure that the recipes is not empty, and then map thru the recipes
+            and grab what we need to render */}
+            {recipes !== [] && recipes.map(recipe => <Recipe key={uuidv4()} recipe={recipe}/>)}
+            </div>
+        </div>
+    )
 }
 
-export default App;
+export default App
