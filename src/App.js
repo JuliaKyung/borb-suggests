@@ -49,8 +49,11 @@ const App = () => {
     }
 
     return (
-        <div className="app-div">
+        <center><div className="app-div">
             <h1>Borb suggests!</h1>
+            <div className="borbimg">
+                <img src="https://i.ibb.co/D8DDp9q/borblove.png"/>
+            </div>
             <form className="searchForm" onSubmit={submitSearch}>
                 {alert !== "" && <Alert alert={alert}/>}
                 <input 
@@ -70,7 +73,7 @@ const App = () => {
             and grab what we need to render */}
             {recipes !== [] && recipes.map(recipe => <Recipe key={uuidv4()} recipe={recipe}/>)}
             </div>
-        </div>
+        </div></center>
     )
 }
 
