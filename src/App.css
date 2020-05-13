@@ -1,15 +1,52 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("https://i.ibb.co/vBc3t6V/stripe-6aad10f1ac96747f15fe99224a9614e2.png");
+}
+
+h1 {
+  background-color: #E9D3B9;
+  text-shadow: 1px 1px 4px #9CC99A;
+  color: #4C4C4C;
+  width: 100%;
+  font-size: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 .app-div {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
-    background-color: cornflowerblue;
+    background-color: #A4A4A4;
+    border-radius: 0.5rem;
+}
+
+.alert {
+  background-color: rgba(240, 28, 28, 0.795);
+  border-radius: 0.2rem;
+}
+
+.alert h3 {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .borbimg {
   position: fixed;
-  top: 30%;
-  left: 65%;
+  bottom: 0px;
+  right: 0px;
+}
+
+.diet {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .resultsDiv {
@@ -26,7 +63,7 @@
     margin: 3rem;
     display: flex;
     flex-direction: column;
-    background-color: #d3d3d3;
+    background-color: #E9D3B9;
     padding: 2rem;
     position: relative;
     border-radius: 0.5rem;
@@ -34,14 +71,14 @@
   }
   
   .recipe h2 {
-    background-color: rgba(161, 161, 161, 0.7);
+    background-color: rgba(182, 136, 84, 0.7);
     border-radius: 0.5rem;
     padding: 0.3rem 0.5rem;
     position: absolute;
     top: 0.5rem;
     left: 2.5rem;
     right: 2.5rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 400;
     color: #fff;
   }
@@ -55,6 +92,38 @@
   }
   
   .recipe a {
-    font-size: 1.8rem;
-    color: #40b48e;
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: #526951;
+    border-radius: 0.5rem;
+    color: #9CC99A;
+  }
+
+  .recipe a:hover {
+    color: #526951;
+    background-color: #9CC99A;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    border: 2px solid #9CC99A;
+  }
+
+  input[type=text]:focus {
+    border: 2px solid #ffffff;
+  }
+
+  input[type=submit] {
+    background-color: #9CC99A;
+    border: none;
+    width: 100%;
+    border-radius: 0.2rem;
+    padding: 5px;
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    font-weight: 400;
   }

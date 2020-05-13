@@ -52,7 +52,7 @@ const App = () => {
         <center><div className="app-div">
             <h1>Borb suggests!</h1>
             <div className="borbimg">
-                <img src="https://i.ibb.co/D8DDp9q/borblove.png"/>
+                <img src="https://i.ibb.co/41ntSZB/output-dzavb5.gif" height="370px" width="370px"/>
             </div>
             <form className="searchForm" onSubmit={submitSearch}>
                 {alert !== "" && <Alert alert={alert}/>}
