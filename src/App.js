@@ -65,6 +65,7 @@ const App = () => {
                     <input type="radio" onClick={onClick} id="vegetarian" name="dietbtn"/> Vegetarian
                     <input type="radio" onClick={onClick} id="vegan" name="dietbtn"/> Vegan
                     <input type="radio" onClick={onClick} id="ketogenic" name="dietbtn"/> Keto
+                    <input type="radio" onClick={onClick} id="gluten-free" name="dietbtn"/> Gluten Free
                 </form>
                 <input type="submit" value="search"></input>
             </form>
