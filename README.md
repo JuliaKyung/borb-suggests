@@ -1,5 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+It was also made during my time as a student at Code Chrysalis
+
+# 🍽️ Borb Suggests! 🍽️
+
+### 🌐 Deployed on Netlify!
+https://awesome-gates-55cb4d.netlify.app/
+
+## About
+Search through recipes brought to you by https://spoonacular.com/food-api/ ! 🥂
+
+🍜 Borb will suggest recipes to you based on your search input, and you will be able to view a preview of the dish, the name, and go to the recipe page! 
+
+🥑 You can even sort by vegetarian, vegan, and keto diet restrictions!
+
+🐤 While you're browsing, enjoy the borb bouncing in the corner for moral support.
+
 ## Available Scripts
 
 In the project directory, you can run:
