@@ -44,6 +44,12 @@ h1 {
   right: 0px;
 }
 
+@media screen and (max-width: 768px) {
+  .borbimg {
+      display: none;
+  }
+}
+
 .diet {
   background-color: hsla(0, 0%, 100%, 0.3);
   padding: 0.5rem;
