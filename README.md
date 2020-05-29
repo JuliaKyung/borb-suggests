@@ -5,12 +5,14 @@ It was also made during my time as a student at Code Chrysalis
 # 🍽️ Borb Suggests! 🍽️
 
 ### 🌐 Deployed on Netlify!
-https://awesome-gates-55cb4d.netlify.app/
+
+<https://awesome-gates-55cb4d.netlify.app/>
 
 ## About
-Search through recipes brought to you by https://spoonacular.com/food-api/ ! 🥂
 
-🍜 Borb will suggest recipes to you based on your search input, and you will be able to view a preview of the dish, the name, and go to the recipe page! 
+Search through recipes brought to you by <https://spoonacular.com/food-api/> ! 🥂
+
+🍜 Borb will suggest recipes to you based on your search input, and you will be able to view a preview of the dish, the name, and go to the recipe page!
 
 🥑 You can even sort by vegetarian, vegan, and keto diet restrictions!
 
@@ -42,5 +44,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-
